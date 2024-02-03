@@ -1,105 +1,62 @@
+
 package com.example.controlesbasicos;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.widget.CompoundButton;
-import android.text.InputFilter;
-import android.text.Spanned;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Spinner;
+import android.widget.TabHost;
 import android.widget.TextView;
-import android.widget.EditText;
+import android.widget.Toast;
+
 public class MainActivity extends AppCompatActivity {
-
-    private EditText txtnum1, txtnum2;
-    private TextView lblrespuesta;
-    private RadioGroup optCalculadora;
-
-
+    TabHost tbh;
+    TextView tempVal;
+    Button btn;
+    Spinner spn;
+    conversores objConversor = new conversores();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        txtnum1 = findViewById(R.id.txtnum1);
-        txtnum1.setFilters(new InputFilter[]{
-                new InputFilter() {
-                    @Override
-                    public CharSequence filter(CharSequence source, int start, int end, Spanned dest, int dstart, int dend) {
-                        if (source.toString().matches("[0-9]")) {
-                            return source;
-                        } else {
-                            return "";
-                        }
-                    }
-                }
-        });
-        txtnum2 = findViewById(R.id.txtnum2);
-        lblrespuesta = findViewById(R.id.lblrespuesta);
-        optCalculadora = findViewById(R.id.optCalculadora);
+        tbh = findViewById(R.id.tbhConversores);
+        tbh.setup();
 
-        Button btnCalcular = findViewById(R.id.btnCalcular);
-        btnCalcular.setOnClickListener(new View.OnClickListener() {
+        tbh.addTab(tbh.newTabSpec("LONGITUD").setContent(R.id.tabLongitud).setIndicator("LONGITUD", null));
+        tbh.addTab(tbh.newTabSpec("ALMACENAMIENTO").setContent(R.id.tabAlmacenamiento).setIndicator("ALMACENAMIENTO", null));
+        tbh.addTab(tbh.newTabSpec("MONEDAS").setContent(R.id.tabMonedas).setIndicator("MONEDAS",null));
+
+        btn = findViewById(R.id.btnLongitudConvertir);
+        btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                calcularResultado();
+                spn = findViewById(R.id.spnLongitudDe);
+                int de = spn.getSelectedItemPosition();
+
+                spn = findViewById(R.id.spnLongitudA);
+                int a = spn.getSelectedItemPosition();
+
+                tempVal = findViewById(R.id.txtLongitudCantidad);
+                double cantidad = Double.parseDouble(tempVal.getText().toString());
+
+                double resp = objConversor.convertir(0, de, a, cantidad);
+                Toast.makeText(getApplicationContext(),"Respuesta: "+
+                        resp, Toast.LENGTH_LONG).show();
             }
         });
-
-    }
-
-    public void calcularResultado() {
-        double num1 = Double.parseDouble(txtnum1.getText().toString());
-        double num2 = 0;
-        if (!txtnum2.getText().toString().isEmpty()) {
-            num2 = Double.parseDouble(txtnum2.getText().toString());
-        }
-
-        int selectedId = optCalculadora.getCheckedRadioButtonId();
-        RadioButton selectedRadioButton = findViewById(selectedId);
-
-        double resultado = 0;
-
-        if (selectedRadioButton.getId() == R.id.optSuma) {
-            resultado = num1 + num2;
-        } else if (selectedRadioButton.getId() == R.id.optResta) {
-            resultado = num1 - num2;
-        } else if (selectedRadioButton.getId() == R.id.optMultiplicacion) {
-            resultado = num1 * num2;
-        } else if (selectedRadioButton.getId() == R.id.optDivision) {
-            if (num2 != 0) {
-                resultado = num1 / num2;
-            } else {
-                lblrespuesta.setText("No es posible dividir por cero");
-                return;
-            }
-        } else if (selectedRadioButton.getId() == R.id.optExponenciacion) {
-            resultado = Math.pow(num1, num2);
-        } else if (selectedRadioButton.getId() == R.id.optPorcentaje) {
-            resultado = (num1 * num2) / 100;
-
-        }  else if (selectedRadioButton.getId() == R.id.optFactorial) {
-            resultado = factorial((int)num1);
-        } else if (selectedRadioButton.getId() == R.id.optRaiz) {
-            if (num1 >= 0) {
-                resultado = Math.sqrt(num1);
-            } else {
-                lblrespuesta.setText("No es posible calcular la raíz cuadrada de un número negativo");
-                return;
-            }
-        }
-
-
-        lblrespuesta.setText("Respuesta: " + resultado);
-    }
-    public int factorial(int n) {
-        if (n == 0) {
-            return 1;
-        } else {
-            return n * factorial(n - 1);
-        }
     }
 }
-
+class conversores{
+    double[][] valores = {
+            {1,100, 39.3701, 3.280841666667, 1.193, 1.0936138888889999077,
+                    0.001, 0.000621371}
+    };
+    public double convertir(int opcion, int de, int a, double cantidad){
+        return valores[opcion][a] / valores[opcion][de] * cantidad;
+    }
+}
