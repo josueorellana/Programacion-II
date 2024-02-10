@@ -156,6 +156,59 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/lblMonedasDe"
+                        android:layout_marginTop="60dp"
+                        android:layout_marginLeft="40dp"
+                        android:text="DE:"
+                        android:textSize="18dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:id="@+id/lblMonedasA"
+                        android:layout_below="@+id/lblMonedasDe"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="40dp"
+                        android:text="A:"
+                        android:textSize="18sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <Spinner
+                        android:id="@+id/spnMonedasDe"
+                        android:layout_below="@+id/lblMonedasDe"
+                        android:layout_marginTop="-20dp"
+                        android:layout_marginLeft="80dp"
+                        android:layout_marginRight="30dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <Spinner
+                        android:id="@+id/spnMonedasA"
+                        android:layout_below="@+id/lblMonedasA"
+                        android:layout_marginTop="-20dp"
+                        android:layout_marginLeft="80dp"
+                        android:layout_marginRight="30dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <EditText
+                        android:id="@+id/txtMonedasCantidad"
+                        android:layout_below="@+id/spnMonedasA"
+                        android:layout_marginTop="30dp"
+                        android:hint="Cantidad a Convertir"
+                        android:textSize="25dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="25dp"
+                        android:layout_marginLeft="10dp"/>
+                    <Button
+                        android:id="@+id/btnMonedasConvertir"
+                        android:layout_below="@+id/txtMonedasCantidad"
+                        android:layout_marginTop="30dp"
+                        android:text="CONVERTIR"
+                        android:layout_marginLeft="70dp"
+                        android:layout_marginRight="70dp"
+                        android:textSize="18dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
 
                 </RelativeLayout>
             </FrameLayout>
