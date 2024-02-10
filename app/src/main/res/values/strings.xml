@@ -17,5 +17,19 @@
         <item>KB</item>
         <item>GB</item>
         <item>TB</item>
+        <item>PB</item>
+        <item>EP</item>
+        <item>ZB</item>
+    </string-array>
+    <string-array name="spnMonedas">
+        <item>Dolar salvadoreño</item>
+        <item>Dolar Estadounidense</item>
+        <item>Dolar Canadiense</item>
+        <item>Euro</item>
+        <item>Balboa</item>
+        <item>Colon costarricence</item>
+        <item>Cordova</item>
+        <item>Lempira</item>
+        <item>Quetzal</item>
     </string-array>
 </resources>
