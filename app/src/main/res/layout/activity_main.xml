@@ -17,18 +17,12 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-    <HorizontalScrollView
-        android:id="@+id/scrollView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fillViewport="true"
-        android:scrollbars="horizontal"/>
 
-    <TabWidget
-        android:id="@android:id/tabs"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
-    </TabWidget>
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"></TabWidget>
 
 
             <FrameLayout
@@ -38,11 +32,14 @@
 
 
                 <!-- Longitud -->
+
+
+                <!-- Almace -->
                 <RelativeLayout
                     android:id="@+id/tabLongitud"
                     android:layout_width="match_parent"
                     android:layout_height="651dp"
-                    android:orientation="vertical">
+                    android:orientation="horizontal">
 
                     <TextView
                         android:id="@+id/lblLongitudDe"
@@ -106,13 +103,11 @@
                         android:textSize="18dp" />
                 </RelativeLayout>
 
-
-                <!-- Almace -->
                 <RelativeLayout
                     android:id="@+id/tabAlmacenamiento"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical">
+                    android:orientation="horizontal">
 
                     <TextView
                         android:id="@+id/lblAlmacenamientoDe"
@@ -176,7 +171,7 @@
                     android:id="@+id/tabMonedas"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical">
+                    android:orientation="horizontal">
                     <TextView
                         android:id="@+id/lblMonedasDe"
                         android:layout_marginTop="60dp"
@@ -239,7 +234,7 @@
                     android:id="@+id/tabMasa"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical">
+                    android:orientation="horizontal">
                     <TextView
                         android:id="@+id/lblMasaDe"
                         android:layout_marginTop="60dp"
@@ -299,7 +294,7 @@
                     android:id="@+id/tabVolumen"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical">
+                    android:orientation="horizontal">
                     <TextView
                         android:id="@+id/lblVolumenDe"
                         android:layout_marginTop="60dp"
@@ -361,7 +356,7 @@
                     android:id="@+id/tabTiempo"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical">
+                    android:orientation="horizontal">
                     <TextView
                         android:id="@+id/lblTiempoDe"
                         android:layout_marginTop="60dp"
@@ -421,7 +416,7 @@
                     android:id="@+id/tabTransferenciaDeDatos"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical">
+                    android:orientation="horizontal">
                     <TextView
                         android:id="@+id/lblTransferenciaDeDatosDe"
                         android:layout_marginTop="60dp"
