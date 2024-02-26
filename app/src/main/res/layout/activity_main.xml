@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
     <TabHost
         android:id="@+id/tbhConversores"
         android:layout_width="match_parent"
@@ -17,98 +16,81 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-
-
             <TabWidget
                 android:id="@android:id/tabs"
-                android:layout_width="wrap_content"
-                android:layout_height="25dp"></TabWidget>
-
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
             <FrameLayout
                 android:id="@android:id/tabcontent"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-
-                <!-- Longitud -->
-
-
-                <!-- Almace -->
                 <RelativeLayout
                     android:id="@+id/tabLongitud"
                     android:layout_width="match_parent"
-                    android:layout_height="651dp"
-                    android:orientation="horizontal">
-
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
                     <TextView
                         android:id="@+id/lblLongitudDe"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="40dp"
                         android:layout_marginTop="60dp"
+                        android:layout_marginLeft="40dp"
                         android:text="DE:"
-                        android:textSize="18dp" />
-
+                        android:textSize="18dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
                     <TextView
                         android:id="@+id/lblLongitudA"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
                         android:layout_below="@+id/lblLongitudDe"
-                        android:layout_marginLeft="40dp"
                         android:layout_marginTop="20dp"
+                        android:layout_marginLeft="40dp"
                         android:text="A:"
-                        android:textSize="18sp" />
-
+                        android:textSize="18sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
                     <Spinner
                         android:id="@+id/spnLongitudDe"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
                         android:layout_below="@+id/lblLongitudDe"
-                        android:layout_marginLeft="80dp"
                         android:layout_marginTop="-20dp"
+                        android:layout_marginLeft="80dp"
                         android:layout_marginRight="30dp"
-                        android:entries="@array/spnLongitud" />
-
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
                     <Spinner
                         android:id="@+id/spnLongitudA"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
                         android:layout_below="@+id/lblLongitudA"
-                        android:layout_marginLeft="80dp"
                         android:layout_marginTop="-20dp"
+                        android:layout_marginLeft="80dp"
                         android:layout_marginRight="30dp"
-                        android:entries="@array/spnLongitud" />
-
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
                     <EditText
                         android:id="@+id/txtLongitudCantidad"
+                        android:layout_below="@+id/spnLongitudA"
+                        android:layout_marginTop="30dp"
+                        android:hint="Cantidad a Convertir"
+                        android:textSize="25dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/spnLongitudA"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginTop="30dp"
                         android:layout_marginRight="25dp"
-                        android:hint="Cantidad a Convertir"
-                        android:textSize="25dp" />
-
+                        android:layout_marginLeft="10dp"/>
                     <Button
                         android:id="@+id/btnLongitudConvertir"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
                         android:layout_below="@+id/txtLongitudCantidad"
-                        android:layout_marginLeft="80dp"
                         android:layout_marginTop="30dp"
-                        android:layout_marginRight="80dp"
                         android:text="CONVERTIR"
-                        android:textSize="18dp" />
+                        android:layout_marginLeft="70dp"
+                        android:layout_marginRight="70dp"
+                        android:textSize="18dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
                 </RelativeLayout>
 
                 <RelativeLayout
                     android:id="@+id/tabAlmacenamiento"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="horizontal">
-
+                    android:orientation="vertical">
                     <TextView
                         android:id="@+id/lblAlmacenamientoDe"
                         android:layout_marginTop="60dp"
@@ -129,7 +111,6 @@
                     <Spinner
                         android:id="@+id/spnAlmacenamientoDe"
                         android:layout_below="@+id/lblAlmacenamientoDe"
-                        android:entries="@array/spnAlmacenamiento"
                         android:layout_marginTop="-20dp"
                         android:layout_marginLeft="80dp"
                         android:layout_marginRight="30dp"
@@ -138,7 +119,6 @@
                     <Spinner
                         android:id="@+id/spnAlmacenamientoA"
                         android:layout_below="@+id/lblAlmacenamientoA"
-                        android:entries="@array/spnAlmacenamiento"
                         android:layout_marginTop="-20dp"
                         android:layout_marginLeft="80dp"
                         android:layout_marginRight="30dp"
@@ -159,19 +139,18 @@
                         android:layout_below="@+id/txtAlmacenamientoCantidad"
                         android:layout_marginTop="30dp"
                         android:text="CONVERTIR"
-                        android:layout_marginLeft="80dp"
-                        android:layout_marginRight="80dp"
+                        android:layout_marginLeft="70dp"
+                        android:layout_marginRight="70dp"
                         android:textSize="18dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
                 </RelativeLayout>
 
-                <!-- Longitud -->
                 <RelativeLayout
                     android:id="@+id/tabMonedas"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="horizontal">
+                    android:orientation="vertical">
                     <TextView
                         android:id="@+id/lblMonedasDe"
                         android:layout_marginTop="60dp"
@@ -192,7 +171,6 @@
                     <Spinner
                         android:id="@+id/spnMonedasDe"
                         android:layout_below="@+id/lblMonedasDe"
-                        android:entries="@array/spnMonedas"
                         android:layout_marginTop="-20dp"
                         android:layout_marginLeft="80dp"
                         android:layout_marginRight="30dp"
@@ -201,7 +179,6 @@
                     <Spinner
                         android:id="@+id/spnMonedasA"
                         android:layout_below="@+id/lblMonedasA"
-                        android:entries="@array/spnMonedas"
                         android:layout_marginTop="-20dp"
                         android:layout_marginLeft="80dp"
                         android:layout_marginRight="30dp"
@@ -222,12 +199,11 @@
                         android:layout_below="@+id/txtMonedasCantidad"
                         android:layout_marginTop="30dp"
                         android:text="CONVERTIR"
-                        android:layout_marginLeft="80dp"
-                        android:layout_marginRight="80dp"
+                        android:layout_marginLeft="70dp"
+                        android:layout_marginRight="70dp"
                         android:textSize="18dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
-
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -350,8 +326,6 @@
                         android:layout_height="wrap_content"/>
                 </RelativeLayout>
 
-
-                <!-- Longitud -->
                 <RelativeLayout
                     android:id="@+id/tabTiempo"
                     android:layout_width="match_parent"
@@ -471,7 +445,6 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
                 </RelativeLayout>
-
 
             </FrameLayout>
         </LinearLayout>

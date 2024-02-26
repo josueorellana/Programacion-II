@@ -33,6 +33,10 @@ public class MainActivity extends AppCompatActivity {
         tbh.addTab(tbh.newTabSpec("ALMACENAMIENTO").setContent(R.id.tabAlmacenamiento).setIndicator("ALMACENAMIENTO", null));
         tbh.addTab(tbh.newTabSpec("MONEDAS").setContent(R.id.tabMonedas).setIndicator("MONEDAS",null));
         tbh.addTab(tbh.newTabSpec("MASA").setContent(R.id.tabMasa).setIndicator("MASA",null));
+        tbh.addTab(tbh.newTabSpec("VOLUMEN").setContent(R.id.tabVolumen).setIndicator("VOLUMEN",null));
+        tbh.addTab(tbh.newTabSpec("TIEMPO").setContent(R.id.tabTiempo).setIndicator("TIEMPO",null));
+        tbh.addTab(tbh.newTabSpec("TRANSFERENCIA DE DATOS").setContent(R.id.tabTransferenciaDeDatos).setIndicator("TRANSFERENCIA DE DATOS",null));
+
 
         btn = findViewById(R.id.btnLongitudConvertir);
         btn.setOnClickListener(new View.OnClickListener() {
