@@ -132,7 +132,7 @@
                         android:layout_marginRight="25dp"
                         android:layout_marginLeft="10dp"/>
                     <Button
-                        android:id="@+id/btnConversorConvertir"
+                        android:id="@+id/btnConvertir"
                         android:layout_below="@+id/txtConversorCantidad"
                         android:layout_marginTop="30dp"
                         android:text="CONVERTIR"
