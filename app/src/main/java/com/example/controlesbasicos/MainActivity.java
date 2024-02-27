@@ -22,8 +22,8 @@ public class MainActivity extends AppCompatActivity {
         tbh = findViewById(R.id.tbhConversores);
         tbh.setup();
 
-        tbh.addTab(tbh.newTabSpec("LONGITUD").setContent(R.id.tabLongitud).setIndicator("LONGITUD", null));
-        tbh.addTab(tbh.newTabSpec("ALMACENAMIENTO").setContent(R.id.tabAlmacenamiento).setIndicator("ALMACENAMIENTO", null));
+        tbh.addTab(tbh.newTabSpec("Consumo de agua potable").setContent(R.id.tabAguaPotable).setIndicator("Consumo de agua potable", null));
+        tbh.addTab(tbh.newTabSpec("Conversor de area").setContent(R.id.tabConversor).setIndicator("Conversor de area", null));
     }
 }
 
