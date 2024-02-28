@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         tbh = findViewById(R.id.tbhConversores);
         tbh.setup();
 
-        tbh.addTab(tbh.newTabSpec("Consumo de agua potable").setContent(R.id.tabAguaPotable).setIndicator("Consumo de agua potable", null));
+        tbh.addTab(tbh.newTabSpec("Consumo de agua").setContent(R.id.tabAguaPotable).setIndicator("Consumo de agua", null));
         tbh.addTab(tbh.newTabSpec("Conversor de area").setContent(R.id.tabConversor).setIndicator("Conversor de area", null));
 
         btnAguaPotable = findViewById(R.id.btnAguaPotable);
