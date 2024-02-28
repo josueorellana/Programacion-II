@@ -27,8 +27,9 @@ public class MainActivity extends AppCompatActivity {
         tbh.addTab(tbh.newTabSpec("Consumo de agua potable").setContent(R.id.tabAguaPotable).setIndicator("Consumo de agua potable", null));
         tbh.addTab(tbh.newTabSpec("Conversor de area").setContent(R.id.tabConversor).setIndicator("Conversor de area", null));
 
-        btnConvertir = findViewById(R.id.btnConvertir);
         btnAguaPotable = findViewById(R.id.btnAguaPotable);
+        btnConvertir = findViewById(R.id.btnConvertir);
+
         btnConvertir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -46,21 +47,42 @@ public class MainActivity extends AppCompatActivity {
                         resp, Toast.LENGTH_LONG).show();
             }
         });
+
+        btnAguaPotable.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                double cuota;
+
+                txtAguaPotable= findViewById(R.id.txtAguaPotable);
+                double calculo = Double.parseDouble(txtAguaPotable.getText().toString());
+                if(calculo >= 1 && calculo <= 18){
+                    cuota = 6;
+                } else if (calculo >= 19 && calculo <= 28) {
+                    double excesoDe18 = calculo - 18;
+                    cuota = 6.0 + (excesoDe18 * 0.45);
+                }else {
+                    double excesoDe28 = calculo - 28;
+                    double excesoDe18 = 28 - 18;
+                    cuota = 6.0 + (excesoDe18 * 0.45) + (excesoDe28 * 0.65);
+                }
+                Toast.makeText(getApplicationContext(),"La cantidad a pagar es de: $"+
+                        cuota, Toast.LENGTH_LONG).show();
+            }
+        });
     }
 }
 
 class Superficie {
     double[][] valores = {
-            {1, 629.856, 0.0929, 0.835905, 0.836, 6988.96, 10000}
+            {1, 1000, 10.764, 0.7396, 0.8361, 6988.96, 10000}
     };
-
     public double convertir(int opcion, int de, int a, double cantidad) {
         return valores[opcion][a] / valores[opcion][de] * cantidad;
-
     }
-
-
 }
+
+
+
 
 
 
