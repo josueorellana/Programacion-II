@@ -125,7 +125,7 @@
                         android:id="@+id/txtConversorCantidad"
                         android:layout_below="@+id/spnConversorA"
                         android:layout_marginTop="30dp"
-                        android:hint="Cantidad a transformar"
+                        android:hint="Cantidad a convertir"
                         android:textSize="25dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
