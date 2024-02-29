@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
 
 class Superficie {
     double[][] valores = {
-            {1, 1000, 10.764, 0.7396, 0.8361, 6988.96, 10000}
+            {1, 0.0015903307888, 10.7639, 1.3949972136, 1.19599, 0.0001428571429, 0.0001}
     };
     public double convertir(int opcion, int de, int a, double cantidad) {
         return valores[opcion][a] / valores[opcion][de] * cantidad;
