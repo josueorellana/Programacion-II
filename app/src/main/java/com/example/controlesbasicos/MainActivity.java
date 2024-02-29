@@ -43,8 +43,9 @@ public class MainActivity extends AppCompatActivity {
                 double cantidad = Double.parseDouble(txtConversorCantidad.getText().toString());
 
                 double resp = ConversorArea.convertir(0, de, a, cantidad);
+                String convertido = String.format("%.4f",resp);
                 Toast.makeText(getApplicationContext(),"Respuesta: "+
-                        resp, Toast.LENGTH_LONG).show();
+                        convertido, Toast.LENGTH_LONG).show();
             }
         });
 
