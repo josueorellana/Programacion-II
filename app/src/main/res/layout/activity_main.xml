@@ -17,8 +17,8 @@
         android:layout_marginTop="40dp"
         android:hint="Nombre"
         android:inputType="textPersonName"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
     <EditText
@@ -27,8 +27,8 @@
         android:hint="Direccion"
         android:layout_below="@id/txtnombre"
         android:inputType="textMultiLine"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
     <EditText
@@ -36,8 +36,8 @@
         android:layout_marginTop="40dp"
         android:hint="Telefono"
         android:inputType="phone"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
         android:layout_width="match_parent"
         android:layout_below="@id/txtdireccion"
         android:layout_height="wrap_content"/>
@@ -46,8 +46,8 @@
         android:layout_marginTop="40dp"
         android:hint="Email"
         android:inputType="textEmailAddress"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
         android:layout_width="match_parent"
         android:layout_below="@id/txtTelefono"
         android:layout_height="wrap_content"/>
@@ -55,8 +55,8 @@
         android:id="@+id/txtdui"
         android:layout_marginTop="40dp"
         android:hint="DUI"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
         android:layout_below="@id/txtemail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
@@ -66,6 +66,8 @@
         android:text="GUARDAR AMIGO"
         android:layout_below="@id/txtdui"
         android:layout_marginTop="40dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
